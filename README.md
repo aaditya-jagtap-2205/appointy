@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="assets/logo">
+    ![A logo of hospital](./assets/logo)
 </h1>
 
 <p align="center">
