@@ -28,7 +28,7 @@ app.use('/api/doctors', doctorRoutes);
 app.use('/api/admin', adminRoutes);
 
 // Health check
-app.get('/', (req, res) => res.json({ message: 'Appointy API running ✅' }));
+app.get('/', (req, res) => res.json({ message: 'Appointy API running' }));
 
 const PORT = process.env.PORT || 5000;
 const startServer = async () => {
@@ -41,13 +41,13 @@ const startServer = async () => {
       // #region agent log
       sendDebugLog({runId:'initial',hypothesisId:'H4',location:'backend/server.js:40',message:'HTTP server listening',data:{port:PORT}});
       // #endregion
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(`Server running on http://localhost:${PORT}`);
     });
   } catch (error) {
     // #region agent log
     await sendDebugLog({runId:'initial',hypothesisId:'H5',location:'backend/server.js:45',message:'startServer failed',data:{errorMessage:error.message}});
     // #endregion
-    console.error(`❌ Failed to start server: ${error.message}`);
+    console.error(`Failed to start server: ${error.message}`);
     process.exit(1);
   }
 };
