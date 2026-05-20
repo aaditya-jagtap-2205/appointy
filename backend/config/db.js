@@ -29,7 +29,7 @@ const connectDB = async () => {
     // #region agent log
     sendDebugLog({runId:'initial',hypothesisId:'H4',location:'backend/config/db.js:29',message:'mongoose.connect success',data:{host:conn.connection.host,port:conn.connection.port,name:conn.connection.name}});
     // #endregion
-    console.log(`✅ MongoDB connected: ${conn.connection.host}`);
+    console.log(`MongoDB connected: ${conn.connection.host}`);
     return conn;
   } catch (err) {
     // #region agent log
